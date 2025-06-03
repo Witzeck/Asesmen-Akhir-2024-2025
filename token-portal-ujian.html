@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Portal Ujian</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f9f9f9;
+      padding: 50px;
+    }
+    input, button {
+      padding: 10px;
+      margin: 10px;
+      font-size: 16px;
+    }
+    .link-ujian {
+      margin-top: 20px;
+      display: none;
+    }
+    a {
+      display: block;
+      margin: 15px auto;
+      padding: 10px;
+      background-color: #3498db;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      width: 300px;
+    }
+    a:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Portal Ujian Siswa</h1>
+  <p>Masukkan token ujian untuk membuka soal:</p>
+
+  <input type="text" id="tokenInput" placeholder="Contoh: MAT2024">
+  <button onclick="cekToken()">Kirim</button>
+
+  <div class="link-ujian" id="linkUjianMatematika">
+    <a href="https://drive.google.com/file/d/1BXZXL0F-iKSY1P0gmM0ihpUVnJbwrVq/preview" target="_blank">Ujian Matematika</a>
+  </div>
+  <div class="link-ujian" id="linkUjianBinggris">
+    <a href="https://drive.google.com/file/d/1GVW5izYVZACd2P8eQq85cHHTJm563nQ/preview" target="_blank">Ujian Bahasa Inggris</a>
+  </div>
+  <div class="link-ujian" id="linkUjianIPA">
+    <a href="https://drive.google.com/file/d/12EY8J18C3AfVrTSTrGtnqSnZcHq1HjX/preview" target="_blank">Ujian IPA</a>
+  </div>
+
+  <p id="pesanError" style="color: red;"></p>
+
+  <script>
+    function cekToken() {
+      const token = document.getElementById("tokenInput").value.trim().toUpperCase();
+      const pesan = document.getElementById("pesanError");
+
+      // Sembunyikan semua link
+      document.querySelectorAll('.link-ujian').forEach(el => el.style.display = "none");
+      pesan.textContent = "";
+
+      // Cek token
+      switch(token) {
+        case "MAT2024":
+          document.getElementById("linkUjianMatematika").style.display = "block";
+          break;
+        case "BING2024":
+          document.getElementById("linkUjianBinggris").style.display = "block";
+          break;
+        case "IPA2024":
+          document.getElementById("linkUjianIPA").style.display = "block";
+          break;
+        default:
+          pesan.textContent = "Token salah atau belum waktunya ujian.";
+      }
+    }
+  </script>
+
+</body>
+</html>
