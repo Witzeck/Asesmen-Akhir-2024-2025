@@ -2,18 +2,44 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Portal Ujian</title>
+  <title>Portal Ujian - SMPIT Baitussalam 2 Cangkringan</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       text-align: center;
       background-color: #f9f9f9;
       padding: 50px;
+      color: #2c3e50;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 5px;
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: normal;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+    p {
+      margin: 10px 0;
     }
     input, button {
       padding: 10px;
       margin: 10px;
       font-size: 16px;
+      width: 300px;
+      max-width: 90%;
+    }
+    button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2980b9;
     }
     .link-ujian {
       margin-top: 20px;
@@ -28,31 +54,41 @@
       text-decoration: none;
       border-radius: 8px;
       width: 300px;
+      max-width: 90%;
     }
     a:hover {
       background-color: #2980b9;
+    }
+    #pesanError {
+      color: red;
+      margin-top: 15px;
     }
   </style>
 </head>
 <body>
 
   <h1>Portal Ujian Siswa</h1>
+  <h2>SMPIT Baitussalam 2 Cangkringan</h2>
+  <p>Selamat datang di portal Asesmen Semester Genap Tahun Ajaran 2024/2025.</p>
   <p>Masukkan token ujian untuk membuka soal:</p>
 
-  <input type="text" id="tokenInput" placeholder="Contoh: MAT2024">
+  <input type="text" id="tokenInput" placeholder="Input token disini">
   <button onclick="cekToken()">Kirim</button>
 
   <div class="link-ujian" id="linkUjianMatematika">
-    <a href="https://drive.google.com/file/d/1BXZXL0F-iKSY1P0gmM0ihpUVnJbwrVq/preview" target="_blank">Ujian Matematika</a>
+    <a href="https://drive.google.com/file/d/1BXZXL0K-iKSY_1PU9mMojhpLVnJbwrVg/preview" target="_blank">Ujian Matematika</a>
   </div>
   <div class="link-ujian" id="linkUjianBinggris">
-    <a href="https://drive.google.com/file/d/1GVW5izYVZACd2P8eQq85cHHTJm563nQ/preview" target="_blank">Ujian Bahasa Inggris</a>
+    <a href="https://drive.google.com/file/d/1GW5EizYVZdCZp8PeQq85cHHTJm563n_Q/preview" target="_blank">Ujian Bahasa Inggris</a>
   </div>
   <div class="link-ujian" id="linkUjianIPA">
-    <a href="https://drive.google.com/file/d/12EY8J18C3AfVrTSTrGtnqSnZcHq1HjX/preview" target="_blank">Ujian IPA</a>
+    <a href="https://drive.google.com/file/d/12EY8Jl8C3AfvfTSrGtnJqSn_ZcHg1HjX/preview" target="_blank">Ujian IPA</a>
+  </div>
+  <div class="link-ujian" id="linkUjianPP">
+    <a href="https://drive.google.com/file/d/14We9Aa5koXw1yhEDs5pAgPHipF_hR56_/preview" target="_blank">Ujian PP</a>
   </div>
 
-  <p id="pesanError" style="color: red;"></p>
+  <p id="pesanError"></p>
 
   <script>
     function cekToken() {
@@ -73,6 +109,9 @@
           break;
         case "IPA2024":
           document.getElementById("linkUjianIPA").style.display = "block";
+          break;
+        case "PP2024":
+          document.getElementById("linkUjianPP").style.display = "block";
           break;
         default:
           pesan.textContent = "Token salah atau belum waktunya ujian.";
