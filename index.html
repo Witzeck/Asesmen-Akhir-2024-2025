@@ -101,6 +101,9 @@
   <div class="link-ujian" id="linkUjianPP7">
     <a href="https://drive.google.com/file/d/1bjZtGYT3umDV4LPchCxr44VJQUJ-yij4/preview" target="_blank">Ujian Pendidikan Pancasil Kelas 7</a>
   </div>
+  <div class="link-ujian" id="linkUjianPP8">
+    <a href="https://drive.google.com/file/d/1lW0X6GwRKFRqqGMYS48obnmjF5EN4d_f/preview" target="_blank">Ujian Pendidikan Pancasil Kelas 8</a>
+  </div>
   <div class="link-ujian" id="linkUjianTIK7">
     <a href="https://drive.google.com/file/d/14HWtGThxvvlHFMggIVf9VV708ZW8z3qx/preview" target="_blank">Ujian TIK Kelas 7</a>
   </div>
@@ -163,19 +166,19 @@
 
       // Cek token
       switch(token) {
-        case "A71106":
+        	case "A71106":
           document.getElementById("linkUjianMatematika7").style.display = "block";
           break;
 		case "A81106":
           document.getElementById("linkUjianMatematika8").style.display = "block";
           break;
-        case "A71306":
+        	case "A71306":
           document.getElementById("linkUjianBinggris7").style.display = "block";
           break;
 		case "A81306":
           document.getElementById("linkUjianBinggris8").style.display = "block";
           break;
-        case "A71206":
+        	case "A71206":
           document.getElementById("linkUjianIPA7").style.display = "block";
           break;
 		case "A81206":
@@ -187,8 +190,11 @@
 		case "A81006":
           document.getElementById("linkUjianBindo8").style.display = "block";
           break;
-        case "B71106":
+        	case "B71106":
           document.getElementById("linkUjianPP7").style.display = "block";
+          break;
+		case "B71106":
+          document.getElementById("linkUjianPP8").style.display = "block";
           break;
 		case "B71206":
           document.getElementById("linkUjianTIK7").style.display = "block";
