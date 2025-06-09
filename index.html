@@ -158,6 +158,12 @@
   <div class="link-ujian" id="linkUjianPAI8">
     <a href="https://drive.google.com/file/d/1CuDB2yuBcIhPJ35EYzJ7Wuz5JdYfHc9T/preview" target="_blank">Ujian PAI Kelas 8</a>
   </div>
+  <div class="link-ujian" id="linkUjianIPS7">
+    <a href="https://drive.google.com/file/d/1vnaEYDboqyO_O6r9w_a8DxTXhdMn3A0Z/preview" target="_blank">Ujian IPS Kelas 7</a>
+  </div>
+  <div class="link-ujian" id="linkUjianIPS8">
+    <a href="GANTI LINK/preview" target="_blank">Ujian IPS Kelas 8</a>
+  </div>
 
   <p id="pesanError"></p>
 
@@ -255,6 +261,12 @@
           break;
 		case "B81006":
           document.getElementById("linkUjianPAI8").style.display = "block";
+          break;
+		case "A71606":
+          document.getElementById("linkUjianIPS7").style.display = "block";
+          break;
+		case "A81606":
+          document.getElementById("linkUjianIPS8").style.display = "block";
           break;
         default:
           pesan.textContent = "Token salah atau belum waktunya ujian.";
