@@ -147,10 +147,16 @@
     <a href="https://drive.google.com/file/d/1epOSVhg2KvzdJ5YvSlP8eua8-rxYGi1A/preview" target="_blank">Ujian Seni Budaya Kelas 8</a>
   </div>
   <div class="link-ujian" id="linkUjianPJOK7">
-    <a href="https://drive.google.com/file/d/1mZA6PRTbYlzdsNRBTEX-cS2EtGSGdstt/preview" target="_blank">Ujian Seni PJOK Kelas 7</a>
+    <a href="https://drive.google.com/file/d/1mZA6PRTbYlzdsNRBTEX-cS2EtGSGdstt/preview" target="_blank">Ujian PJOK Kelas 7</a>
   </div>
   <div class="link-ujian" id="linkUjianPJOK8">
-    <a href="https://drive.google.com/file/d/1VYGEwXRvhlr1_ilXWO2982psiSv9oPuJ/preview" target="_blank">Ujian Seni PJOK Kelas 8</a>
+    <a href="https://drive.google.com/file/d/1VYGEwXRvhlr1_ilXWO2982psiSv9oPuJ/preview" target="_blank">Ujian PJOK Kelas 8</a>
+  </div>
+  <div class="link-ujian" id="linkUjianPAI7">
+    <a href="https://drive.google.com/file/d/1FgkE9S2pDaI0G2vRy7HyPoeMrDZw2YoN/preview" target="_blank">Ujian PAI Kelas 7</a>
+  </div>
+  <div class="link-ujian" id="linkUjianPAI8">
+    <a href="https://drive.google.com/file/d/1CuDB2yuBcIhPJ35EYzJ7Wuz5JdYfHc9T/preview" target="_blank">Ujian PAI PJOK Kelas 8</a>
   </div>
 
   <p id="pesanError"></p>
@@ -243,6 +249,12 @@
           break;
 		case "B81606":
           document.getElementById("linkUjianPJOK8").style.display = "block";
+          break;
+		case "B71006":
+          document.getElementById("linkUjianPAI7").style.display = "block";
+          break;
+		case "B81006":
+          document.getElementById("linkUjianPAI8").style.display = "block";
           break;
         default:
           pesan.textContent = "Token salah atau belum waktunya ujian.";
